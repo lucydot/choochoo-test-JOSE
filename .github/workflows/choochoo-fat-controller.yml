@@ -23,7 +23,7 @@ jobs:
     env: 
       ISSUE_NUMBER: ${{ github.event.issue.number }}
       GITHUB_REPOSITORY: ${{ github.repository }}
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.CHOO_ACCESS_TOKEN }}
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
@@ -38,7 +38,7 @@ jobs:
     env: 
       ISSUE_NUMBER: ${{ github.event.issue.number }}
       GITHUB_REPOSITORY: ${{ github.repository }}
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.CHOO_ACCESS_TOKEN }}
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
@@ -58,7 +58,7 @@ jobs:
     - uses: ben-z/actions-comment-on-issue@1.0.3
       with:
         message: "**[checks ticket]** I'm afraid you don't have permission to run choochoo commands here."
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.CHOO_ACCESS_TOKEN }}
     
   not_instructor_student:
     if: |
@@ -74,7 +74,7 @@ jobs:
     - uses: ben-z/actions-comment-on-issue@1.0.3
       with:
         message: "**[checks ticket]** To run choochoo commands your issue must be labelled with `instructor`, `student`, `question proposal` or `accepted question`."
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.CHOO_ACCESS_TOKEN }}
 
   choochoo:
     if: |
@@ -87,14 +87,14 @@ jobs:
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     env: 
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.CHOO_ACCESS_TOKEN }}
       ISSUE_NUMBER: ${{ github.event.issue.number }}
       GITHUB_REPOSITORY: ${{ github.repository }}
       GITHUB_ACTOR: ${{ github.actor }}
     steps:
     - uses: actions/checkout@v2
       with: 
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.CHOO_ACCESS_TOKEN }}
     - uses: actions/setup-python@v2
       with:
         python-version: 3.11
@@ -114,14 +114,14 @@ jobs:
        startsWith(github.event.comment.body,'choochoo ') 
     runs-on: ubuntu-latest
     env: 
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.CHOO_ACCESS_TOKEN }}
       ISSUE_NUMBER: ${{ github.event.issue.number }}
       GITHUB_REPOSITORY: ${{ github.repository }}
       GITHUB_ACTOR: ${{ github.actor }}
     steps:
     - uses: actions/checkout@v2
       with: 
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.CHOO_ACCESS_TOKEN }}
     - uses: actions/setup-python@v2
       with:
         python-version: 3.11
