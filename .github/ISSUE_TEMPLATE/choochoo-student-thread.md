@@ -15,11 +15,11 @@ Your personal checklist is generated below. You can also interact with me, chooc
 To list all possible choochoo commands type `choochoo list commands` in comment box below.
 
 
-### Running Python |   [links](https://nu-cem.github.io/CompPhys/2021/08/02/01-Running_Python)  | 
+### Running Python |   [links](https://lucydot.github.io/python_novice/01-run-quit/index.html)  | 
 1) - [ ] open and save a Jupyter Notebook |    
 2) - [ ] use basic Markdown in a notebook |    
 
 
-### Lists |   [links](https://nu-cem.github.io/CompPhys/2021/08/02/01-lists)  | 
+### Lists |   [links](https://lucydot.github.io/python_novice/05-lists/index.html)  | 
 3) - [ ] create a list |    
 4) - [ ] add to a list | [tutorials](https://lucydot.github.io/ChooChoo-template/tutorials/lists)  |   
