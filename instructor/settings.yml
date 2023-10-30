@@ -1,13 +1,13 @@
 # Key settings (must edit)
-project_title: repository title
-project_repo: username/repo-name
+project_title: choochoo test JOSE
+project_repo: lucydot/choochoo-test-JOSE
 admins:
-- your_handle_here
+- @lucydot
 instructors:
-- your_handle_here
+- @lucydot
 students:
-- your_handle_here
-web_address: https://username.github.io/repo-name
+- @lucydot
+web_address: https://lucydot.github.io/choochoo-test-JOSE
 
 # User options (may edit)
 questions: true
